@@ -1,8 +1,13 @@
+@font-face {
+  font-family: neue;
+  src: url(./Font/NeueHaasDisplayMediu.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: neue;
 }
 
 html,
@@ -17,7 +22,10 @@ body {
   background-color: #efeae3;
   position: relative;
 }
-.page1 nav {
+nav {
+  padding: 2vw 3vw;
+  height: 100px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,11 +33,52 @@ body {
 .nav-right {
   display: flex;
   align-items: center;
+  gap: 2vw;
+}
+.nav-right h4 {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #8a8a8a;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-right h4::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.nav-right h4:hover::after {
+  bottom: 0;
 }
 .nav-right a {
   text-decoration: none;
   padding: 10px;
-  color: #212121;
-  border: 1px solid red;
-  border-radius: 10px;
+  color: #000000bb;
+  z-index: 9;
+  position: relative;
+}
+.nav-right a:hover {
+  color: #fff;
+}
+/* Center */
+.center {
+  height: 65vh;
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.centerLeft h3 {
+  width: 30vw;
+  font-size: 2px;
 }
